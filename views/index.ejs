@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Marksheets</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>All Marksheet</h1>
+    <button class="add"><a href="/marks/new"> + Marksheet</a></button>
+    <table class="view" border="1">
+        <thead>
+            <th>Name</th>
+            <th>Rollno</th>
+            <th>Rollcode</th>
+            <th>Hindi</th>
+            <th>Sanskrit</th>
+            <th>Maths</th>
+            <th>S.sc</th>
+            <th>Science</th>
+            <th>English</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <% for(let mrk of data) {%>
+            <tr>
+                <td><%= mrk.name %></td>
+                <td><%= mrk.roll %></td>
+                <td><%= mrk.rollc %></td>
+                <td><%= mrk.hindi %></td>
+                <td><%= mrk.sans %></td>
+                <td><%= mrk.maths %></td>
+                <td><%= mrk.ssc %></td>
+                <td><%= mrk.sci %></td>
+                <td><%= mrk.eng %></td>
+                <td>
+                    <button class="add"><a href="/marks/<%= mrk.id %>">View</a></button>
+                    <button class="add"><a href="/marks/<%= mrk.id %>/edit">Edit</a></button>
+                    <form action="/marks/<%= mrk.id %>?_method=DELETE" method="post">
+                        <button class="add">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>

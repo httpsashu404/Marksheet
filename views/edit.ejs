@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Marksheet</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Update Marksheet</h1>
+    <fieldset class="new">
+        <legend><b>(Update Marksheet)</b></legend>
+            <form action="/marks/<%= data.id %>?_method=PUT" method="post" autocomplete="off">
+                <label for="name"><b>Name : </b></label>
+                <input type="text" name="name" id="data" class="input" value="<%= data.name %>" placeholder="Your fullName" readonly><br><br>
+                <label for="fname"><b>Father : </b></label>
+                <input type="text" name="fname" id="data" class="input" value="<%= data.fname %>" placeholder="Your fatherName" readonly><br><br>
+                <label for="roll"><b>Rollno : </b></label>
+                <input type="tel" name="roll" id="roll" maxlength="8" value="<%= data.roll %>" class="input" placeholder="Your marks" readonly><br><br>
+                <label for="rollc"><b>Rollcode : </b></label>
+                <input type="tel" name="rollc" id="rollc" maxlength="5" value="<%= data.rollc %>" class="input" placeholder="Your marks" readonly><br><br>
+                <label for="dob"><b>DOB : </b></label>
+                <input type="date" name="dob" id="dob" class="input" value="<%= data.dob %>" placeholder="Your dateOfBirth" readonly><br><br>
+                <label for="hindi"><b>Hindi : </b></label>
+                <input type="tel" name="hindi" id="hindi" maxlength="2" value="<%= data.hindi %>" class="input" placeholder="Your marks" required><br><br>
+                <label for="sans"><b>Sanskrit : </b></label>
+                <input type="tel" name="sans" id="sans" maxlength="2" value="<%= data.sans %>" class="input" placeholder="Your marks" required><br><br>
+                <label for="ssc"><b>S.Science : </b></label>
+                <input type="tel" name="ssc" id="ssc" maxlength="2" value="<%= data.ssc %>" class="input" placeholder="Your marks" required><br><br>
+                <label for="sci"><b>Science : </b></label>
+                <input type="tel" name="sci" id="sci" maxlength="2" value="<%= data.sci %>" class="input" placeholder="Your marks" required><br><br>
+                <label for="maths"><b>Maths : </b></label>
+                <input type="tel" name="maths" id="maths" maxlength="2" value="<%= data.maths %>" class="input" placeholder="Your marks" required><br><br>
+                <label for="eng"><b>English : </b></label>
+                <input type="tel" name="eng" id="eng" maxlength="2" value="<%= data.eng %>" class="input" placeholder="Your marks" required><br><br>
+                <button class="add" type="submit">Update</button>
+            </form>
+    </fieldset>
+</body>
+</html>

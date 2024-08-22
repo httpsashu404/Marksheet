@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Marksheet</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>New Marksheet Entry</h1>
+    <fieldset class="new">
+        <legend><b>(New Marksheet)</b></legend>
+            <form action="/marks" method="post" enctype="multipart/form-data" autocomplete="off">
+                <label for="name"><b>Name<sup>*</sup> : </b></label>
+                <input type="text" name="name" id="data" class="input" placeholder="Your fullName" required autofocus><br><br>
+                <label for="fname"><b>Father<sup>*</sup> : </b></label>
+                <input type="text" name="fname" id="data" class="input" placeholder="Your fatherName" required><br><br>
+                <label for="roll"><b>Rollno : <sup>*</sup> : </b></label>
+                <input type="tel" name="roll" id="roll" maxlength="8" class="input" placeholder="Your rollNo" required><br><br>
+                <label for="rollc"><b>Rollcode<sup>*</sup> : </b></label>
+                <input type="tel" name="rollc" id="rollc" maxlength="5" class="input" placeholder="Your rollCode" required><br><br>
+                <label for="dob"><b>DOB<sup>*</sup> : </b></label>
+                <input type="date" name="dob" id="dob" class="input" placeholder="Your dateOfBirth" required><br><br>
+                <label for="hindi"><b>Hindi<sup>*</sup> : </b></label>
+                <input type="tel" name="hindi" id="hindi" maxlength="2" class="input" placeholder="Your marks" required><br><br>
+                <label for="sans"><b>Sanskrit<sup>*</sup> : </b></label>
+                <input type="tel" name="sans" id="sans" maxlength="2" class="input" placeholder="Your marks" required><br><br>
+                <label for="ssc"><b>S.Science<sup>*</sup> : </b></label>
+                <input type="tel" name="ssc" id="ssc" maxlength="2" class="input" placeholder="Your marks" required><br><br>
+                <label for="sci"><b>Science<sup>*</sup> : </b></label>
+                <input type="tel" name="sci" id="sci" maxlength="2" class="input" placeholder="Your marks" required><br><br>
+                <label for="maths"><b>Maths<sup>*</sup> : </b></label>
+                <input type="tel" name="maths" id="maths" maxlength="2" class="input" placeholder="Your marks" required><br><br>
+                <label for="eng"><b>English<sup>*</sup> : </b></label>
+                <input type="tel" name="eng" id="eng" maxlength="2" class="input" placeholder="Your marks" required><br><br>
+                <label for="img" class="upload">uploadImage</label>
+                <input type="file" style="display: none;" name="image" id="img" accept=".png" required>
+                <button type="submit">Insert</button>
+            </form>
+    </fieldset>
+</body>
+</html>
